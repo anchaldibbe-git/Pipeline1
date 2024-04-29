@@ -17,17 +17,15 @@ pipeline {
 		    steps {
 			script {
 			 if ( env.ENVIRONMENT == 'QA' ){
-        	sh 'cp target/Pipeline1 /home/anchal/Documents/MAVEN/apache-tomcat-9.0.88/webapps
+        	sh 'cp target/Pipeline1.war  /home/anchal/Documents/MAVEN/apache-tomcat-9.0.88/webapps'
         	echo "deployment has been done on QA!"
 			 }
 			elif ( env.ENVIRONMENT == 'UAT' ){
-    		sh 'cp target/Pipeline1 /home/anchal/Documents/MAVEN/apache-tomcat-9.0.88/webapps
+    		sh 'cp target/Pipeline1.war   /home/anchal/Documents/MAVEN/apache-tomcat-9.0.88/webapps'
     		echo "deployment has been done on UAT!"
 			}
 			echo "deployment has been done!"
 			fi
-			
-	
 			}}}	
 }}                 
                    stage('slack'){
