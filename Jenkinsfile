@@ -28,9 +28,10 @@ pipeline {
 			fi
 			}}}	
 }}                 
+                  
                    stage('slack'){
-	                  step{
-                                 slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'slack1', color: 'good', message: 'hello slack', teamDomain: 'Devops', tokenCredentialId: 'slack1', username: 'slack'
+	                  steps{
+                                 slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'slack1', color: 'good', message: 'hello', teamDomain: 'Devops'
 			  }}
 
 
