@@ -27,10 +27,10 @@ pipeline {
 			echo "deployment has been done!"
 			
 			}}}	
-}}               stage('Slack'){
+              stage('Slack'){
 	                  steps{
-                                 slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'slack1', color: 'good', message: 'hello', teamDomain: 'Devops'
+                               slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'slack1', color: 'good', message: 'hello', teamDomain: 'Devops'
 			  }}
 
 
-				  
+		}}    
