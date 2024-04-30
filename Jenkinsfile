@@ -24,8 +24,7 @@ pipeline {
     		sh 'cp target/Pipeline1.war   /home/anchal/Documents/MAVEN/apache-tomcat-9.0.88/webapps'
     		echo "deployment has been done on UAT!"
 			}
-			echo "deployment has been done!"
-			
+		
 			}}}	
               stage('Slack'){
 	                  steps{
