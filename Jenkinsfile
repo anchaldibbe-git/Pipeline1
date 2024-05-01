@@ -20,16 +20,13 @@ pipeline {
         	sh 'cp target/Pipeline1.war  /home/anchal/Documents/MAVEN/apache-tomcat-9.0.88/webapps'
         	echo "deployment has been done on QA!"
 			 }
-			elif ( env.ENVIRONMENT == 'UAT' ){
+			else ( env.ENVIRONMENT == 'UAT' ){
     		sh 'cp target/Pipeline1.war   /home/anchal/Documents/MAVEN/apache-tomcat-9.0.88/webapps'
     		echo "deployment has been done on UAT!"
-			}
-		
-			}}}	
-              stage('Slack'){
-	                  steps{
-                               slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'slack1', color: 'good', message: 'hello', teamDomain: 'Devops'
-			  }}
+			
+			}}
+		    }}}
+}
 
 
 		}}    
