@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Slack') {
             steps {
-                slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#slack2', color: 'good', message: 'slackI', teamDomain: 'Devops'
+                slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#slack3', color: 'good', message: 'hello this is slack integrate', notifyCommitters: true, teamDomain: 'Devops'
             }
         }
     }
