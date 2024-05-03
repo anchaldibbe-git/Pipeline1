@@ -35,8 +35,7 @@ pipeline {
         stage('Slack Notification') {
             steps {
                 script {
-                    def slackMessage = "Build ${currentBuild.result}: Pipeline deployed to ${env.ENVIRONMENT} environment by ${env.USER}"
-                    slackSend(baseUrl: 'https://hooks.slack.com/services/', channel: '#slack3', color: currentBuild.result == 'SUCCESS' ? 'good' : 'danger', message: slackMessage, notifyCommitters: true, teamDomain: 'Devops')
+                    slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#slack4', color: 'good', message: 'this is slack integration', notifyCommitters: true, teamDomain: 'Devops'
                 }
             }
         }
